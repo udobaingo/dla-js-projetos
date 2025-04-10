@@ -71,3 +71,4 @@ if (divisao > 0) {
 } else {
   console.log("O número é par");
 }
+// Comentário
