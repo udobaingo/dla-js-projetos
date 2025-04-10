@@ -50,21 +50,6 @@ while (inv < invMeta) {
     anos++;
 }
 
-// COMPRA PARCELADA
-let valor_compra = 1000
-let numero_parcelas = 12
-let valor_parcela = valor_compra / numero_parcelas
-
-for (let i = 0; i < numero_parcelas; i++) {
-  console.log(
-    `Parcela ${i + 1}: R$${valor_parcela.toFixed(2)}, resta pagar ${
-      numero_parcelas - i
-    } parcelas e a divida é no total de R$${(
-      valor_compra -
-      valor_parcela * i
-    ).toFixed(2)}`
-  )
-}
 // COMPRA PARCELADA 2
 let valorCompra = 1000;
 let nParcelas = 12;
