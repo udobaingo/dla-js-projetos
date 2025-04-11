@@ -70,8 +70,8 @@ console.log(`Saldo total do Banco 4: R$ ${saldoBanco4.toFixed(2)}`);
 
 // FILA 3: Fila para atendimento na UPA. Primeiro atendimento, recebimento de uma senha. Aguardar a senha ser chamada para a triagem. 
 // Triagem com o atendente de triagem. Retorno ao guiche para coletar documentos e recebimento de uma senha nova. Aguardar nova senha
-// ser chamada pelo medico atendente. Atendimento pelo medico. Expedicao de receitas e demais documentos. Aguardara atendimento 
-// para atendimento pela enfermaria. Atendimento enfermaria. Saida da UPA com guia de liberacao.
+// ser chamada pelo medico atendente. Atendimento pelo medico. Expedicao de receitas e demais documentos. Aguardar atendimento 
+// para atendimento pela enfermaria. Atendimento enfermaria. Saida da UPA com guia de liberacao assinado.
 
 // FILA 4: Fila na entrada de um jogo da Copa. Compra de tiquete online. Escaneamento de tiquete no computador local. 
 // Expedicao de documento para triagem. Triagem para a fila de entrada certa. Entrada na sequencia de entrada na fila de entrada certa.
