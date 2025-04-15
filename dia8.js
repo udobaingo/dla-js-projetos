@@ -94,8 +94,44 @@ console.log(`Saldo total do Banco 4: R$ ${saldoBanco4.toFixed(2)}`);
 // Escaneamento do codigo de barras na entrada do estadio.
 // 
 // DESAFIO 2: FILA DO CAIXA DE SUPERMERCADO - Quantas operações podem haver no caixa 
-// Funcao Iniciar Atendimento
+// Funcao entrarFila
+// Funcao iniciarAtendimento (de um cliente ou de mais do que um cliente?)
 // Funcao iniciarContagemDeCompra
-// Funcao Adicionar Valores dos itens ou quantidade x valores de itens
-// Funcao Fechar nota
-// Funcao Concluir atendimento 
+// Funcao adicionarValores (dos itens ou quantidade x valores de itens)
+// Funcao fecharNota
+// Funcao concluirAtendimento 
+// DESAFIO 2: Cópia da resolucao oferecida por Vanessa e 
+// 1 CRIAR ARRAY VAZIO
+let fila = [];
+// 2 ADICIONAR UM ELEMENTO AO FINAL DA FILA
+function entrarNaFila (nome) {
+fila [fila.length] = nome; // isso é equivalente a fila.push(nome); 
+console.log(`${nome} entrou na fila.`);
+}
+// 
+//Atende o primeiro cliente da fila
+function atenderCliente() { 
+if [fila.length > 0) {
+let clienteAtendido = fila [0]; 
+//    Agora, vamos remover o primeiro elemento manualmente
+    for(let i = 1; i < fila.length; i++) {
+   fila[i-1] = fila [i];
+}
+    fila.length = fila.length - 1; // Isso é equivalente a fila.shift();
+   console.log(`${clienteAtendido} foi atendido.`);
+} else {
+   console.log("Não há clientes na fila para atender.");
+}
+// 
+function mostrarFila() {
+ if (fila.length > 0) {
+    console.log("Clientes na fila: " + fila.join(", "));
+ } else {
+        console.log("A fila está vazia.");
+     }
+ }
+//
+// Vamos testar as funções: 
+entrarNaFila("João");
+entrarNaFila("Maria");
+entrarNaFila("Udo");
