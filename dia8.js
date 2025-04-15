@@ -93,3 +93,9 @@ console.log(`Saldo total do Banco 4: R$ ${saldoBanco4.toFixed(2)}`);
 // Entrada na sequencia de entrada na fila de entrada certa.
 // Escaneamento do codigo de barras na entrada do estadio.
 // 
+// DESAFIO 2: FILA DO CAIXA DE SUPERMERCADO - Quantas operações podem haver no caixa 
+// Funcao Iniciar Atendimento
+// Funcao iniciarContagemDeCompra
+// Funcao Adicionar Valores dos itens ou quantidade x valores de itens
+// Funcao Fechar nota
+// Funcao Concluir atendimento 
