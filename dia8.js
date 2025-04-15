@@ -111,7 +111,7 @@ console.log(`${nome} entrou na fila.`);
 // 
 //Atende o primeiro cliente da fila
 function atenderCliente() { 
-if [fila.length > 0) {
+if (fila.length > 0) {
 let clienteAtendido = fila [0]; 
 //    Agora, vamos remover o primeiro elemento manualmente
     for(let i = 1; i < fila.length; i++) {
@@ -121,6 +121,7 @@ let clienteAtendido = fila [0];
    console.log(`${clienteAtendido} foi atendido.`);
 } else {
    console.log("Não há clientes na fila para atender.");
+}
 }
 // 
 function mostrarFila() {
@@ -135,3 +136,7 @@ function mostrarFila() {
 entrarNaFila("João");
 entrarNaFila("Maria");
 entrarNaFila("Udo");
+
+mostrarFila();
+
+atenderCliente();
