@@ -1,3 +1,11 @@
+// Principais operações em filas:
+// 1 ENQUEUE Adiciona um item na fila
+// 2 DEQUEUE Retira o primeiro item da fila
+// 3 FRONT PEEK Retorna o primeiro item da fila
+// 4 isEmpty
+// 6 isFull
+// 6 Rear:  Retorna o último elemento da fila
+
 // Inicializando a fila de chamadas
 let filaDeChamadas = [];
 
@@ -19,7 +27,7 @@ function atenderChamada() {
 
 // Função para exibir o status da fila
 function statusDaFila() {
-    console.log(`Total de chamadasna fila: ${filaDeChamadas.length}`);
+    console.log(`Total de chamadas na fila: ${filaDeChamadas.length}`);
     if (filaDeChamadas.length > 0 ) {
         console.log("Chamadas esperando: " + filaDeChamadas.join(", "));
     }
@@ -39,3 +47,44 @@ statusDaFila();
 // Atendendo mais chamadas
 atenderChamada();
 atenderChamada();
+
+// DESAFIO: CAFETERIA DRIVE THROUGH
+
+let filaDeCarros = [];
+
+// Função para carros entrarem na fila
+function entrarNaFila(placaNumero){
+    filaDeCarros.push(placaNumero);
+    console.log(`Carro com placa ${placaNumero}. Total de carros na fila: ${filaDeCarros.length}.`);
+} 
+
+// Função para atendimento de cliente no carro via totem eletrônico
+function atenderCliente(){
+    if (filaDeCarros === 0) {
+        console.log("Não há nenhum carro na fila de atendimento.");
+    } else {
+        let clienteEmAtendimento = filaDeCarros.shift();
+        console.log(`Atendendo cliente com carro ${clienteEmAtendimento}.`);
+    }
+}
+
+// Função para exibir status da fila
+function statussDaFila(){
+    console.log(`Total de carros na fila: ${filaDeCarros.length}`);
+    if (filaDeCarros > 0) {
+        console.log("Carros esperando atendimento: " + filaDeCarros.join (", "));
+    }
+}
+
+// Simulação:
+
+entrarNaFila ("DE562D11");
+entrarNaFila ("ABC11A1");
+entrarNaFila ("YZW99Y9");
+
+atenderCliente();
+
+statussDaFila();
+
+atenderCliente();
+atenderCliente();
