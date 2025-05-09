@@ -48,7 +48,7 @@ statusDaFila();
 atenderChamada();
 atenderChamada();
 
-// DESAFIO: CAFETERIA DRIVE THROUGH
+// DESAFIO: MINHA SOLUÇÃO PARA A CAFETERIA DRIVE THROUGH
 
 let filaDeCarros = [];
 
@@ -88,3 +88,50 @@ statussDaFila();
 
 atenderCliente();
 atenderCliente();
+
+// DESAFIO: SOLUÇÃO DOS SÊNIORS PARA A CAFETERIA DRIVE THROUGH
+
+// Inicializando a fila de drive-thru
+let filaDriveThru = [];
+
+// Função para um carro entrar na fila
+function entrarNaFila(placaDoCarro, pedido) {
+    filaDriveThru.push([placaDoCarro, pedido]); // Adiciona ao final da fila
+    console.log(`Carro ${placaDoCarro} entrou na fila com o pedido: ${pedido}.`);
+}
+
+// Função para atender o carro
+function atenderCarro() {
+    if (filaDriveThru.length === 0) {
+        console.log("Não há carros na fila.");
+    } else {
+        let carroAtendido = filaDriveThru.shift(); // Remove o carro do início da fila
+        console.log(`Carro ${carroAtendido[0]} com o pedido: ${carroAtendido[1]}.`);
+    }
+}
+
+// Função para exibir o status da fila
+function statusDaFila() {
+    console.log(`Total de carros na fila: ${filaDriveThru.length}`);
+    if (filaDriveThru.length > 0) {
+        console.log("Fila atual: " + filaDriveThru.map(carro => carro[0]).join(", "));    }
+}
+
+// Simulação de carros entrando na fila
+entrarNaFila("ABC1234", "Café");
+entrarNaFila("XYZ5678", "Chá");
+entrarNaFila("DEF9012", "Sanduíche");
+
+// Atendendo um carro
+atenderCarro();
+
+// Verificando o status da fila
+statusDaFila();
+
+// Atendendo mais carros
+atenderCarro();
+atenderCarro();
+
+// Verificando o status da fila
+statusDaFila();
+
