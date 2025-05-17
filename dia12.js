@@ -95,8 +95,8 @@ atenderCliente();
 let filaDriveThru = [];
 
 // Função para um carro entrar na fila
-function entrarNaFila(placaDoCarro, pedido) {
-    filaDriveThru.push([placaDoCarro, pedido]); // Adiciona ao final da fila
+function entrarrNaFila(placaDoCarro, pedido) {
+    filaDriveThru.push([placaDoCarro, pedido]); // Adiciona ao final da fila (um array dentro de outro array!)
     console.log(`Carro ${placaDoCarro} entrou na fila com o pedido: ${pedido}.`);
 }
 
@@ -111,22 +111,22 @@ function atenderCarro() {
 }
 
 // Função para exibir o status da fila
-function statusDaFila() {
+function statusssDaFila() {
     console.log(`Total de carros na fila: ${filaDriveThru.length}`);
     if (filaDriveThru.length > 0) {
         console.log("Fila atual: " + filaDriveThru.map(carro => carro[0]).join(", "));    }
 }
 
 // Simulação de carros entrando na fila
-entrarNaFila("ABC1234", "Café");
-entrarNaFila("XYZ5678", "Chá");
-entrarNaFila("DEF9012", "Sanduíche");
+entrarrNaFila("ABC1234", "Café");
+entrarrNaFila("XYZ5678", "Chá");
+entrarrNaFila("DEF9012", "Sanduíche");
 
 // Atendendo um carro
 atenderCarro();
 
 // Verificando o status da fila
-statusDaFila();
+statusssDaFila();
 
 // Atendendo mais carros
 atenderCarro();
